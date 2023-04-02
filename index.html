@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,37 +15,45 @@
 
     <title>Rock Paper Scissors Lizard Spock Game</title>
 </head>
+
 <body>
     <header>
         <h1>Rock Paper Scissors Lizard Spock</h1>
     </header>
-    <div>
-        <button id="rules-btn" class="btn">Rules</button>
-        <button id="start-btn" class="btn">Start Game</button>
+    <div  id="rules-btn" >
+        <button class="btn">Rules</button>
     </div>
-    <div id = 'score-board'>
+    <div id='score-board'>
         <div id="player-label" class='label'>Player</div>
         <div id="comp-label" class='label'>Computer</div>
         <span id="player-score">0</span>:<span id="computer-score">0</span>
     </div>
-    <div>
-        <p>Make Your Choice!</p>
-    </div>
-
-    <div class="choices">
+        <div class="choices">
+            <p>Make Your Choice!</p>
         <div class="choice">
-            <img class="img-choice" id="rk" src="assets/images/rock.png" alt="rock icon">
-            <img class="img-choice" id="pr" src="assets/images/paper.png" alt="paper icon">
-            <img class="img-choice" id="ss" src="assets/images/scissors.png" alt="scissors icon">
-            <img class="img-choice" id="lz" src="assets/images/lizard.png" alt="lizard icon">
-            <img class="img-choice" id="sk" src="assets/images/spock.png" alt="spock icon">
+            <button class="img-choice" data-choice="0" aria-label="rock icon">Rock</button>
+            <button class="img-choice" data-choice="1" aria-label="paper icon">Paper</button>
+            <button class="img-choice" data-choice="2" aria-label="scissors icon">Scissors</button>
+            <button class="img-choice" data-choice="3" aria-label="lizard icon">Lizard</button>
+            <button class="img-choice" data-choice="4" aria-label="spock icon">Spock</button>
         </div>
     </div>
     </div>
-
+    <div class="player">
+        <h3 class='label'>Player</h3>
+        <img id="player-img" src="" alt="Rock Paper Scissors Lizard Spock">
+    </div>
+    <div class="computer">
+        <h3 class='label'>Computer</h3>
+        <img id="comp-img" src="" alt="Rock Paper Scissors Lizard Spock">
+    </div>
     <div class="result">
         <p>Paper smothers rock. You win!</p>
     </div>
+    <footer>
+        <h3>Game design</h3>
+    </footer>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>

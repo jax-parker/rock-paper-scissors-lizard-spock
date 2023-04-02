@@ -9,23 +9,28 @@
 body {
     background-color: blanchedalmond;
 }
+
 header {
     color: #000;
     text-align: center;
     font-family: Caveat, cursive;
     padding: 20px;
+    margin-bottom: 10px;
     font-size: 150%;
+}
+#rules.btn {
+    margin:auto;
 }
 
 .btn {
     border-radius: 7px;
-    padding:10px 10px;
-    font-size:20px;
+    padding: 10px 10px;
+    font-size: 20px;
     background-color: #000;
     color: #fafafa;
     font-family: Open Sans, sans-serif;
-    
 }
+
 .btn:hover {
     background-color: #fafafa;
     color: #000;
@@ -34,8 +39,8 @@ header {
 #score-board {
     border: 3px solid #000;
     border-radius: 5px;
-    width:75%;
-    height:auto;
+    width: 75%;
+    height: auto;
     margin: 20px auto;
     font-family: Open Sans, sans-serif;
     text-align: center;
@@ -45,37 +50,73 @@ header {
 
 .label {
     background-color: #000;
-    color:#fafafa;
+    color: #fafafa;
     font-size: 20px;
-    padding:2px 2px;
+    padding: 2px 2px;
     font-family: Caveat, cursive;
 }
 
 #player-label {
-    float:left;
-    padding:10px;
+    float: left;
+    padding: 10px;
 }
 
 #comp-label {
-    float:right;
-    padding:10px;
+    float: right;
+    padding: 10px;
 }
+
 p {
     font-family: Caveat, cursive;
     font-size: 35px;
     text-align: center;
-    color:#000;
+    color: #000;
+    margin:10px;
+}
+
+.player {
+    font-family: Caveat, cursive;
+    font-size: 35px;
+    text-align: center;
+    color: #000;
+    margin:10px;
+    width:45%;
+    float:left;
+}
+
+.computer {
+    font-family: Caveat, cursive;
+    font-size: 35px;
+    text-align: center;
+    color: #000;
+    margin:10px;
+    width:45%;
+    float:right;
 }
 
 .choice {
     text-align: center;
+    margin: 20px;
+
+}
+
+.img-choice:hover {
+    cursor: pointer;
+    background: yellow;
 }
 
 .img-choice {
     display: inline-block;
-    margin: 25px 0;
+    margin: 10px 20px;
     border: 4px solid #000;
-    border-radius: 50%;
-    padding:10px;
+    border-radius: 5px;
+    padding: 5px;
+}
 
+footer {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background: #000;
+    color: #fafafa;
 }
