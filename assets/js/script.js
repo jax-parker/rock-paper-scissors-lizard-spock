@@ -11,15 +11,21 @@
 */
 /* Declare constants for DOM elements and choice array*/
 
-const buttons = document.getElementById('img-choice');
+//const buttons = document.getElementById('img-choice');
 const playerScore = document.getElementById('player-score');
 const computerScore = document.getElementById('computer-score');
 const playerImage = document.getElementById('player-img');
 const compImage = document.getElementById('comp-img');
 const result = document.getElementById('result');
 const choices = ['rock','paper','scissors','lizard','spock'];
+let buttons = document.getElementsByTagName('button');
 
+for (button of buttons) {
+    button.addEventListener('click', function(){
+        console.log('clicked')
+    })
 
+}
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to buttons 
 
