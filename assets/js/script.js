@@ -20,3 +20,20 @@ const result = document.getElementById('result');
 const choices = ['rock','paper','scissors','lizard','spock'];
 
 
+// Wait for the DOM to finish loading before running the game
+// Add event listeners to buttons 
+
+
+//function playGame(playerChoice) 
+
+//function compChoice()
+
+//function options()
+
+//function checkWinner()
+
+//function updateScores()
+
+//function playerMessage()
+
+//function endGame()
