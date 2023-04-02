@@ -113,6 +113,10 @@ p {
     padding: 5px;
 }
 
+#result {
+    margin:20px;
+}
+
 footer {
     position: absolute;
     width: 100%;
