@@ -39,7 +39,6 @@ function playGame(playerChoice) {
     console.log('computer choice =>'  + compChoice())
     console.log('player choice =>'  + playerChoice)
 }
-playGame('rock')
 
 function compChoice() {
     const randomChoice=(Math.floor(Math.random()*5));
