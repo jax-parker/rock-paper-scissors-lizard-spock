@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function(){
     for (button of buttons) {
         button.addEventListener('click', function(){
             playerChoice = this.getAttribute('data-type');
-            
             playGame(playerChoice);
         });
     }
@@ -59,7 +58,6 @@ function playGame(playerChoice) {
             gameTie(playerChoice, computerChoice);
             break;
     }
-
 }
 
 //Chooses random word from the choices array
