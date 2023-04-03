@@ -19,21 +19,28 @@ const compImage = document.getElementById('comp-img');
 const result = document.getElementById('result');
 const choices = ['rock','paper','scissors','lizard','spock'];
 let buttons = document.getElementsByTagName('button');
+let playerChoice;
 
-for (button of buttons) {
-    button.addEventListener('click', function(){
-        let playerChoice = this.getAttribute('data-type');
-        console.log(playerChoice)
-    })
 
-}
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to buttons 
+document.addEventListener("DOMContentLoaded", function(){
+for (button of buttons) {
+    button.addEventListener('click', function(){
+        playerChoice = this.getAttribute('data-type');
+        playGame(playerChoice);
+    });
+}
+});
+
+function playGame(playerChoice) {
+    console.log("Your choice: " + playerChoice)
+}
 
 
-//function playGame(playerChoice) 
-
-//function compChoice()
+function compChoice() {
+    let comp
+}
 
 //function options()
 
