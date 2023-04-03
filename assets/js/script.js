@@ -81,10 +81,13 @@ function compChoice() {
 function playerWin() {
     playerScore++;
     playerScoreSpan.innerHTML = playerScore;
+    //computerScoreSpan.innerHTML = compScore;
 }
 
 function compWin() {
-    console.log('Computer wins')
+    compScore++;
+    computerScoreSpan.innerHTML = compScore;
+   // playerScoreSpan.innerHTML = compScore;
 
 }
 
