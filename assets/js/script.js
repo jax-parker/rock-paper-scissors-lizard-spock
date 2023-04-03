@@ -12,8 +12,10 @@
 /* Declare constants for DOM elements and choice array*/
 
 //const buttons = document.getElementById('img-choice');
-const playerScore = document.getElementById('player-score');
-const computerScore = document.getElementById('computer-score');
+let playerScore = 0;
+let compScore = 0;
+let playerScoreSpan = document.getElementById('player-score');
+let computerScoreSpan = document.getElementById('computer-score');
 const playerImage = document.getElementById('player-img');
 const compImage = document.getElementById('comp-img');
 const result = document.getElementById('result');
@@ -77,11 +79,14 @@ function compChoice() {
 }
 
 function playerWin(){
-    console.log('Player wins')
+    playerScore++;
+    console.log('win');
+    console.log(playerScore);
 }
 
 function compWin(){
     console.log('Computer wins')
+    
 }
 
 function gameTie() {
