@@ -22,6 +22,7 @@ let buttons = document.getElementsByTagName('button');
 let playerChoice;
 
 
+
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to buttons 
 document.addEventListener("DOMContentLoaded", function(){
@@ -34,14 +35,15 @@ for (button of buttons) {
 });
 
 function playGame(playerChoice) {
-    console.log("Your choice: " + playerChoice)
+    
 }
 
 
 function compChoice() {
-    let comp
+    const randomChoice=(Math.floor(Math.random()*5));
+    return choices[randomChoice];
 }
-
+console.log(compChoice())
 //function options()
 
 //function checkWinner()
