@@ -35,15 +35,17 @@ for (button of buttons) {
 });
 
 function playGame(playerChoice) {
-    
+    const computerChoice = compChoice();
+    console.log('computer choice =>'  + compChoice())
+    console.log('player choice =>'  + playerChoice)
 }
-
+playGame('rock')
 
 function compChoice() {
     const randomChoice=(Math.floor(Math.random()*5));
     return choices[randomChoice];
 }
-console.log(compChoice())
+
 //function options()
 
 //function checkWinner()
