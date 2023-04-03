@@ -14,15 +14,15 @@ let playerChoice;
 
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to buttons 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function(){
     for (button of buttons) {
-        button.addEventListener('click', function () {
+        button.addEventListener('click', function(){
             playerChoice = this.getAttribute('data-type');
-            playerImage = this.getAttribute()
+            
             playGame(playerChoice);
         });
     }
-});
+    });
 
 // Function to decide which choice wins, loses or draws.
 function playGame(playerChoice) {
@@ -89,4 +89,3 @@ function gameTie(playerChoice, computerChoice) {
 
 }
 
-//function endGame()
