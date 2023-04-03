@@ -1,26 +1,12 @@
-/* functions
-    DOM load finish
-    Event Listener for buttons
-    Play the game - 
-    Show correct choice picked image
-    Generate random computer choice 
-    Check winner
-    Correct message player win/ comp win / tie
-    Update scores 
-    Play again? after game ends
-*/
-/* Declare constants for DOM elements and choice array*/
-
-//const buttons = document.getElementById('img-choice');
+//Global variables
 let playerScore = 0;
 let compScore = 0;
 let playerScoreSpan = document.getElementById('player-score');
 let computerScoreSpan = document.getElementById('computer-score');
+const result = document.getElementById('result-message');
 const playerImage = document.getElementById('player-img');
 const compImage = document.getElementById('comp-img');
-const result = document.getElementById('result-message');
-const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
-
+const choices = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
 let buttons = document.getElementsByTagName('button');
 let playerChoice;
 
@@ -32,11 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
     for (button of buttons) {
         button.addEventListener('click', function () {
             playerChoice = this.getAttribute('data-type');
+            playerImage = this.getAttribute()
             playGame(playerChoice);
         });
     }
 });
 
+// Function to decide which choice wins, loses or draws.
 function playGame(playerChoice) {
     let computerChoice = compChoice();
     switch (playerChoice + computerChoice) {
@@ -74,17 +62,20 @@ function playGame(playerChoice) {
 
 }
 
+//Chooses random word from the choices array
 function compChoice() {
     const randomChoice = (Math.floor(Math.random() * 5));
     return choices[randomChoice];
 }
 
+// If player wins, increments score by 1 and shows message
 function playerWin(playerChoice, computerChoice) {
     playerScore++;
     playerScoreSpan.innerHTML = playerScore;
     result.innerHTML = `${playerChoice} beats ${computerChoice}. You win!`;
 }
 
+// If computer wins, increments score by 1 and shows message
 function compWin(playerChoice, computerChoice) {
     compScore++;
     computerScoreSpan.innerHTML = compScore;
@@ -92,7 +83,10 @@ function compWin(playerChoice, computerChoice) {
 
 }
 
+//If both parameters are equal, no score and display message
 function gameTie(playerChoice, computerChoice) {
-    result.innerHTML = ` ${playerChoice} same as ${computerChoice} . It's a tie!`;
+    result.innerHTML = ` ${playerChoice} equals ${computerChoice} . It's a tie!`;
 
 }
+
+//function endGame()
