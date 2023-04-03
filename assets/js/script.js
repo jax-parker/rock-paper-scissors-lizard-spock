@@ -18,7 +18,7 @@ let playerScoreSpan = document.getElementById('player-score');
 let computerScoreSpan = document.getElementById('computer-score');
 const playerImage = document.getElementById('player-img');
 const compImage = document.getElementById('comp-img');
-const result = document.getElementById('result');
+const result = document.getElementById('result-message');
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 let buttons = document.getElementsByTagName('button');
 let playerChoice;
@@ -78,11 +78,10 @@ function compChoice() {
     return choices[randomChoice];
 }
 
-function playerWin(player, computer) {
+function playerWin(playerChoice, computerChoice) {
     playerScore++;
     playerScoreSpan.innerHTML = playerScore;
-    console.log(player)
-    console.log(computer)
+    result.innerHTML = playerChoice + " beats " + computerChoice + ". You win!";
     
 }
 
@@ -96,6 +95,10 @@ function compWin() {
 function gameTie() {
     console.log("It's a tie!")
     
+}
+
+function resultMessage() {
+     
 }
 
 
