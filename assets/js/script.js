@@ -20,6 +20,7 @@ const playerImage = document.getElementById('player-img');
 const compImage = document.getElementById('comp-img');
 const result = document.getElementById('result-message');
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+
 let buttons = document.getElementsByTagName('button');
 let playerChoice;
 
@@ -37,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function playGame(playerChoice) {
-    const computerChoice = compChoice();
+    let computerChoice = compChoice();
     switch (playerChoice + computerChoice) {
         case "paperrock":
         case "paperspock":
@@ -60,14 +61,14 @@ function playGame(playerChoice) {
         case "paperlizard":
         case "rockspock":
         case "scissorsspock":
-            compWin();
+            compWin(playerChoice, computerChoice);
             break;
         case "rockrock":
         case "paperpaper":
         case "scissorsscissors":
         case "lizardlizard":
         case "spockspock":
-            gameTie();
+            gameTie(playerChoice, computerChoice);
             break;
     }
 
@@ -81,25 +82,17 @@ function compChoice() {
 function playerWin(playerChoice, computerChoice) {
     playerScore++;
     playerScoreSpan.innerHTML = playerScore;
-    result.innerHTML = playerChoice + " beats " + computerChoice + ". You win!";
-    
+    result.innerHTML = `${playerChoice} beats ${computerChoice}. You win!`;
 }
 
-function compWin() {
+function compWin(playerChoice, computerChoice) {
     compScore++;
     computerScoreSpan.innerHTML = compScore;
-    
+    result.innerHTML = `${computerChoice} beats ${playerChoice}. You lose!`;
 
 }
 
-function gameTie() {
-    console.log("It's a tie!")
-    
+function gameTie(playerChoice, computerChoice) {
+    result.innerHTML = ` ${playerChoice} same as ${computerChoice} . It's a tie!`;
+
 }
-
-function resultMessage() {
-     
-}
-
-
-
