@@ -78,15 +78,14 @@ function compChoice() {
     return choices[randomChoice];
 }
 
-function playerWin(){
+function playerWin() {
     playerScore++;
-    console.log('win');
-    console.log(playerScore);
+    playerScoreSpan.innerHTML = playerScore;
 }
 
-function compWin(){
+function compWin() {
     console.log('Computer wins')
-    
+
 }
 
 function gameTie() {
