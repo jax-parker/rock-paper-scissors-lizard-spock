@@ -49,7 +49,7 @@ function playGame(playerChoice) {
         case "lizardspock":
         case "spockrock":
         case "spockscissors":
-            playerWin();
+            playerWin(playerChoice, computerChoice);
             break;
         case "rockpaper":
         case "spockpaper":
@@ -78,25 +78,25 @@ function compChoice() {
     return choices[randomChoice];
 }
 
-function playerWin() {
+function playerWin(player, computer) {
     playerScore++;
     playerScoreSpan.innerHTML = playerScore;
-    //computerScoreSpan.innerHTML = compScore;
+    console.log(player)
+    console.log(computer)
+    
 }
 
 function compWin() {
     compScore++;
     computerScoreSpan.innerHTML = compScore;
-   // playerScoreSpan.innerHTML = compScore;
+    
 
 }
 
 function gameTie() {
     console.log("It's a tie!")
+    
 }
 
-//function updateScores()
 
-//function playerMessage()
 
-//function endGame()
