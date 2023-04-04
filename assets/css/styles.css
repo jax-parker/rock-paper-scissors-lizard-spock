@@ -74,24 +74,30 @@ p {
     margin:10px;
 }
 
-.player {
-    font-family: Caveat, cursive;
-    font-size: 35px;
-    text-align: center;
-    color: #000;
-    margin:10px;
-    width:45%;
-    float:left;
+#game-img {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    padding-top: 10px;
+    height:auto;
+}
+.imgChoice {
+    width: 140px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 3px solid #000;
+    padding: 10px 10px;
+    height: 140px;
+    margin: 20px;
 }
 
-.computer {
-    font-family: Caveat, cursive;
-    font-size: 35px;
-    text-align: center;
-    color: #000;
-    margin:10px;
-    width:45%;
-    float:right;
+.imgChoice img {
+    width: 100%;
+    filter: drop-shadow(2px 4px 6px rgb(0 0 0 / 0.5));
 }
 
 .choice {

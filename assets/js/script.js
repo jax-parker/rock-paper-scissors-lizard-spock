@@ -1,14 +1,16 @@
 //Global variables
+const result = document.getElementById('result-message');
+let playerImage = document.getElementById('player-img');
+let compImage = document.getElementById('comp-img');
+const choices = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
 let playerScore = 0;
 let compScore = 0;
 let playerScoreSpan = document.getElementById('player-score');
 let computerScoreSpan = document.getElementById('computer-score');
-const result = document.getElementById('result-message');
-const playerImage = document.getElementById('player-img');
-const compImage = document.getElementById('comp-img');
-const choices = ['Rock', 'Paper', 'Scissors', 'Lizard', 'Spock'];
 let buttons = document.getElementsByTagName('button');
 let playerChoice;
+
+
 
 
 
@@ -27,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function(){
 // Function to decide which choice wins, loses or draws.
 function playGame(playerChoice) {
     const computerChoice = compChoice();
-    console.log('comp choice ' + computerChoice)
-    console.log('user choice ' + playerChoice)
+    document.getElementsByClassName('imgChoice').value="";
+    playerImage.innerHTML ='<img src="/assets/images/' + playerChoice + '.png alt="Rock">';
     switch (playerChoice + computerChoice) {
         case "PaperRock":
         case "PaperSpock":
@@ -69,6 +71,7 @@ function playGame(playerChoice) {
 //Chooses random word from the choices array for the computer turn
 function compChoice() {
     const randomChoice = (Math.floor(Math.random() * 5));
+    compImage.innerHTML ='<img src="assets/images/' + randomChoice + '.png alt="Rock">';
     return choices[randomChoice];
 }
 
