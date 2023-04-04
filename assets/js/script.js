@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
     for (button of buttons) {
         button.addEventListener('click', function(){
             playerChoice = this.getAttribute('data-type');
+            console.log('clicked')
             playGame(playerChoice);
         });
     }
@@ -25,42 +26,47 @@ document.addEventListener("DOMContentLoaded", function(){
 
 // Function to decide which choice wins, loses or draws.
 function playGame(playerChoice) {
-    let computerChoice = compChoice();
+    const computerChoice = compChoice();
+    console.log('comp choice ' + computerChoice)
+    console.log('user choice ' + playerChoice)
     switch (playerChoice + computerChoice) {
-        case "paperrock":
-        case "paperspock":
-        case "scissorspaper":
-        case "scissorslizard":
-        case "rockscissors":
-        case "rocklizard":
-        case "lizardpaper":
-        case "lizardspock":
-        case "spockrock":
-        case "spockscissors":
+        case "PaperRock":
+        case "PaperSpock":
+        case "ScissorsPaper":
+        case "ScissorsLizard":
+        case "RockScissors":
+        case "RockLizard":
+        case "LizardPaper":
+        case "LizardSpock":
+        case "SpockRock":
+        case "SpockScissors":
+            console.log('player wins')
             playerWin(playerChoice, computerChoice);
             break;
-        case "rockpaper":
-        case "spockpaper":
-        case "paperscissors":
-        case "lizardscissors":
-        case "scissorsrock":
-        case "lizardrock":
-        case "paperlizard":
-        case "rockspock":
-        case "scissorsspock":
+        case "RockPaper":
+        case "SpockPaper":
+        case "PaperScissors":
+        case "LizardScissors":
+        case "ScissorsRock":
+        case "LizardRock":
+        case "PaperLizard":
+        case "RockSpock":
+        case "ScissorsSpock":
             compWin(playerChoice, computerChoice);
+            console.log('comp wins')
             break;
-        case "rockrock":
-        case "paperpaper":
-        case "scissorsscissors":
-        case "lizardlizard":
-        case "spockspock":
+        case "RockRock":
+        case "PaperPaper":
+        case "ScissorsScissors":
+        case "LizardLizard":
+        case "SpockSpock":
             gameTie(playerChoice, computerChoice);
+            console.log('tie')
             break;
     }
 }
 
-//Chooses random word from the choices array
+//Chooses random word from the choices array for the computer turn
 function compChoice() {
     const randomChoice = (Math.floor(Math.random() * 5));
     return choices[randomChoice];
