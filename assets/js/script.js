@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', function () {
             playerChoice = this.getAttribute('data-type');
             playGame(playerChoice);
-            
         });
     }
 });
@@ -35,8 +34,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function playGame(playerChoice) {
     document.getElementsByClassName('img-choice').value = "";
     playerImage.innerHTML = `<img src="./assets/images/${playerChoice}.png" alt="Rock">`;
-    gameOptions();
     compChoice();
+    
 }
 
 //Chooses random word from the choices array for the computers turn
@@ -44,13 +43,12 @@ function compChoice() {
     randomChoice = (Math.floor(Math.random() * 5));
     compFinalChoice = choices[randomChoice];
     compImage.innerHTML = `<img src="./assets/images/${compFinalChoice}.png" alt="Rock">`;
-    
+    gameOptions();
 }
 
 // Function to decide which choice wins, loses or draws.
 function gameOptions() {
-
-    switch (playerChoice + computerChoice) {
+    switch (playerChoice + compFinalChoice) {
         case "PaperRock":
 
         case "PaperSpock":
@@ -70,9 +68,9 @@ function gameOptions() {
         case "SpockRock":
 
         case "SpockScissors":
-
+            playerWin(playerChoice, compFinalChoice);
             console.log('player wins')
-            playerWin(playerChoice, computerChoice);
+            
             break;
         case "RockPaper":
         case "SpockPaper":
@@ -83,7 +81,7 @@ function gameOptions() {
         case "PaperLizard":
         case "RockSpock":
         case "ScissorsSpock":
-            compWin(playerChoice, computerChoice);
+            compWin(playerChoice, compFinalChoice);
             console.log('comp wins')
             break;
         case "RockRock":
@@ -91,31 +89,30 @@ function gameOptions() {
         case "ScissorsScissors":
         case "LizardLizard":
         case "SpockSpock":
-            gameTie(playerChoice, computerChoice);
+            gameTie(playerChoice, compFinalChoice);
             console.log('tie')
             break;
     }
 }
 
 
-
 // If player wins, increments score by 1 and shows message
-function playerWin(playerChoice, computerChoice) {
+function playerWin(playerChoice, compFinalChoice) {
     playerScore++;
     playerScoreSpan.innerHTML = playerScore;
-    result.innerHTML = `${playerChoice} beats ${computerChoice}. You win!`;
+    result.innerHTML = `${playerChoice} beats ${compFinalChoice}. You win!`;
 }
 
 // If computer wins, increments score by 1 and shows message
-function compWin(playerChoice, computerChoice) {
+function compWin(playerChoice, compFinalChoice) {
     compScore++;
     computerScoreSpan.innerHTML = compScore;
-    result.innerHTML = `${computerChoice} beats ${playerChoice}. You lose!`;
+    result.innerHTML = `${compFinalChoice} beats ${playerChoice}. You lose!`;
 
 }
 
 //If both parameters are equal, no score and display message
-function gameTie(playerChoice, computerChoice) {
-    result.innerHTML = ` ${playerChoice} equals ${computerChoice} . It's a tie!`;
+function gameTie(playerChoice, compFinalChoice) {
+    result.innerHTML = ` ${playerChoice} equals ${compFinalChoice} . It's a tie!`;
 
 }
