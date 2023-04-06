@@ -35,7 +35,7 @@ function playGame(playerChoice) {
     document.getElementsByClassName('img-choice').value = "";
     playerImage.innerHTML = `<img src="./assets/images/${playerChoice}.png" alt="Rock">`;
     compChoice();
-    
+
 }
 
 //Chooses random word from the choices array for the computers turn
@@ -50,27 +50,17 @@ function compChoice() {
 function gameOptions() {
     switch (playerChoice + compFinalChoice) {
         case "PaperRock":
-
         case "PaperSpock":
-
         case "ScissorsPaper":
-
         case "ScissorsLizard":
-
         case "RockScissors":
-
         case "RockLizard":
-
         case "LizardPaper":
-
         case "LizardSpock":
-
         case "SpockRock":
-
         case "SpockScissors":
             playerWin(playerChoice, compFinalChoice);
             console.log('player wins')
-            
             break;
         case "RockPaper":
         case "SpockPaper":

@@ -74,6 +74,7 @@ p {
     margin:10px;
 }
 
+
 #game-img {
     display: flex;
     flex-flow: row wrap;
@@ -81,7 +82,7 @@ p {
     justify-content: center;
     align-items: center;
     gap:30px;
-    padding-top: 10px;
+    padding-top: 50px;
     height:auto;
 }
 .imgChoice {
@@ -118,14 +119,19 @@ p {
     border-radius: 5px;
     padding: 5px;
 }
-/*.imgChoice {
+.imgChoice {
     background: url("../images/group-pic.png");
-}*/
-#player-img {
     
 }
-#comp-img {
-    
+.label2 {
+    width: 140px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 3px solid #000;
+    padding: 10px 10px;
+    height: 40px;
+    margin: 20px;
 }
 
 #result {
