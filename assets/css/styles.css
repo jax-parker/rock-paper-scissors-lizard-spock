@@ -118,6 +118,15 @@ p {
     border-radius: 5px;
     padding: 5px;
 }
+.imgChoice {
+    background: url("../images/group-pic.png");
+}
+#player-img {
+    
+}
+#comp-img {
+    
+}
 
 #result {
     margin-top:20px;

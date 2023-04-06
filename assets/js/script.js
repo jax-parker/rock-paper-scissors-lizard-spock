@@ -9,6 +9,8 @@ let playerScoreSpan = document.getElementById('player-score');
 let computerScoreSpan = document.getElementById('computer-score');
 let buttons = document.getElementsByTagName('button');
 let playerChoice;
+let script = ['Paper wraps Rock', 'Paper smothers Spock', 'Scissors cut Paper', 'Scissors chop Lizard',
+'Rock blunts Scissors', 'Rock crushes Lizard', 'Lizard eats Paper', 'Lizard poisons Spock']
 
 
 
@@ -29,19 +31,28 @@ document.addEventListener("DOMContentLoaded", function(){
 // Function to decide which choice wins, loses or draws.
 function playGame(playerChoice) {
     const computerChoice = compChoice();
-    document.getElementsByClassName('imgChoice').value="";
-    playerImage.innerHTML ='<img src="/assets/images/' + playerChoice + '.png alt="Rock">';
+    document.getElementsByClassName('img-choice').value="";
     switch (playerChoice + computerChoice) {
         case "PaperRock":
+            
         case "PaperSpock":
+            
         case "ScissorsPaper":
+            
         case "ScissorsLizard":
+            
         case "RockScissors":
+            
         case "RockLizard":
+            
         case "LizardPaper":
+            
         case "LizardSpock":
+            
         case "SpockRock":
+            
         case "SpockScissors":
+            
             console.log('player wins')
             playerWin(playerChoice, computerChoice);
             break;
@@ -71,7 +82,6 @@ function playGame(playerChoice) {
 //Chooses random word from the choices array for the computer turn
 function compChoice() {
     const randomChoice = (Math.floor(Math.random() * 5));
-    compImage.innerHTML ='<img src="assets/images/' + randomChoice + '.png alt="Rock">';
     return choices[randomChoice];
 }
 
