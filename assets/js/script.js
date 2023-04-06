@@ -9,50 +9,68 @@ let playerScoreSpan = document.getElementById('player-score');
 let computerScoreSpan = document.getElementById('computer-score');
 let buttons = document.getElementsByTagName('button');
 let playerChoice;
+let randomChoice;
+let compFinalChoice;
 let script = ['Paper wraps Rock', 'Paper smothers Spock', 'Scissors cut Paper', 'Scissors chop Lizard',
-'Rock blunts Scissors', 'Rock crushes Lizard', 'Lizard eats Paper', 'Lizard poisons Spock']
-
+    'Rock blunts Scissors', 'Rock crushes Lizard', 'Lizard eats Paper', 'Lizard poisons Spock'
+]
+const computerChoice = compChoice();
 
 
 
 
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to buttons 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     for (button of buttons) {
-        button.addEventListener('click', function(){
+        button.addEventListener('click', function () {
             playerChoice = this.getAttribute('data-type');
-            console.log('clicked')
             playGame(playerChoice);
+            
         });
     }
-    });
+});
+
+// Add user choice image to the div
+function playGame(playerChoice) {
+    document.getElementsByClassName('img-choice').value = "";
+    playerImage.innerHTML = `<img src="./assets/images/${playerChoice}.png" alt="Rock">`;
+    gameOptions();
+    compChoice();
+}
+
+//Chooses random word from the choices array for the computers turn
+function compChoice() {
+    randomChoice = (Math.floor(Math.random() * 5));
+    compFinalChoice = choices[randomChoice];
+    compImage.innerHTML = `<img src="./assets/images/${compFinalChoice}.png" alt="Rock">`;
+    
+}
 
 // Function to decide which choice wins, loses or draws.
-function playGame(playerChoice) {
-    const computerChoice = compChoice();
-    document.getElementsByClassName('img-choice').value="";
+function gameOptions() {
+
     switch (playerChoice + computerChoice) {
         case "PaperRock":
-            
+
         case "PaperSpock":
-            
+
         case "ScissorsPaper":
-            
+
         case "ScissorsLizard":
-            
+
         case "RockScissors":
-            
+
         case "RockLizard":
-            
+
         case "LizardPaper":
-            
+
         case "LizardSpock":
-            
+
         case "SpockRock":
-            
+
         case "SpockScissors":
-            
+
             console.log('player wins')
             playerWin(playerChoice, computerChoice);
             break;
@@ -79,11 +97,7 @@ function playGame(playerChoice) {
     }
 }
 
-//Chooses random word from the choices array for the computer turn
-function compChoice() {
-    const randomChoice = (Math.floor(Math.random() * 5));
-    return choices[randomChoice];
-}
+
 
 // If player wins, increments score by 1 and shows message
 function playerWin(playerChoice, computerChoice) {
@@ -105,4 +119,3 @@ function gameTie(playerChoice, computerChoice) {
     result.innerHTML = ` ${playerChoice} equals ${computerChoice} . It's a tie!`;
 
 }
-
