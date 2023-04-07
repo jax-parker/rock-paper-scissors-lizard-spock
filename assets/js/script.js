@@ -11,10 +11,6 @@ let buttons = document.getElementsByTagName('button');
 let playerChoice;
 let randomChoice;
 let compFinalChoice;
-let script = ['Paper wraps Rock', 'Paper smothers Spock', 'Scissors cut Paper', 'Scissors chop Lizard',
-    'Rock blunts Scissors', 'Rock crushes Lizard', 'Lizard eats Paper', 'Lizard poisons Spock'
-]
-const computerChoice = compChoice();
 const replayBtn = document.getElementById('replay-btn');
 
 
@@ -22,8 +18,8 @@ const replayBtn = document.getElementById('replay-btn');
 // Add event listeners to buttons 
 
 document.addEventListener("DOMContentLoaded", function () {
-    for (button of buttons) {
-        button.addEventListener('click', function () {
+    for (buttons of buttons) {
+        buttons.addEventListener('click', function () {
             playerChoice = this.getAttribute('data-type');
             playGame(playerChoice);
 
@@ -74,7 +70,7 @@ function gameOptions() {
         case "RockSpock":
         case "ScissorsSpock":
             compWin(playerChoice, compFinalChoice);
-            console.log('comp wins')
+            console.log('comp wins');
             break;
         case "RockRock":
         case "PaperPaper":
@@ -82,7 +78,7 @@ function gameOptions() {
         case "LizardLizard":
         case "SpockSpock":
             gameTie(playerChoice, compFinalChoice);
-            console.log('tie')
+            console.log('tie');
             break;
     }
 }
@@ -115,9 +111,9 @@ function gameTie(playerChoice, compFinalChoice) {
 // Game ends when the user or the computer gets to 10 points & returns message
 function endGame() {
     if (playerScore === 10) {
-        result.innerHTML = "Congratulations! You beat the computer!"
+        result.innerHTML = "Congratulations! You beat the computer!";
     } else if (compScore === 10) {
-        result.innerHTML = "Sorry! The computer has beaten you!"
+        result.innerHTML = "Sorry! The computer has beaten you!";
     }
 
 

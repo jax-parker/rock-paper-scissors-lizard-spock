@@ -35,7 +35,7 @@
 
   # Project 2 Rock Paper Scissors Lizard Spock Game!
   ## Purpose
-  This website was created for the sole purpose of completing the second project for the Code Institues's Full Stack Developer Course. It was built using the knowledge gained from the HTML, CSS and JavaScript courses and  Scrimba course. A full list of technologies used can be found in the technologies section of this document. The game is an extension of the original Rock Paper Scissors game and has simple rules. The player picks a variable and the image is revealed simultaneously along with a random computer choice. The winner is shown in a message as per the rules page and is the first to get to 10. In the event of a tie the score remain the same until a winner is found.
+  This website was created for the sole purpose of completing the second project for the Code Institues's Full Stack Developer Course. It was built using the knowledge gained from the HTML, CSS and JavaScript courses and  Scrimba course. A full list of technologies used can be found in the technologies section of this document. The game is an extension of the original Rock Paper Scissors game and has simple rules. The player picks a variable and the image is revealed simultaneously along with a random computer choice. The winner is shown in a message as per the rules page and is the first to get to 10. In the event of a tie the score remains the same until a winner is found.
 
   The live website can be found [here] (https://jax-parker.github.io/rock-paper-scissors-lizard-spock/).
 
@@ -47,7 +47,7 @@
 ## User Experience Design
 
 ### User stories
-#### First Time Visitor Goals
+#### Visitor Goals
 
     * As a visiting user, I want to be able to understand how to play the game after reading the rules.
     * As a visiting user, I want to be able visually see which choice I made.
@@ -58,26 +58,28 @@
 ### Design
 #### Colour Scheme
 The colours chosen were contrasting to assist accesibility and picked from:.<br>
-![Hex Colors](assets/readme-images/hex-colors.png)
+![Hex Colors](assets/readme-images/hex-colours.png)
 #### Typography
 The title and message font used are **Caveat** which is cursive to give a fun, informal look. All other text used is **Open Sans** with letter spacing to ensure it is easy to read for children. Both fonts were imported from Google Fonts.<br>
 ![Fonts Used](assets/readme-images/fonts.png)
 #### Imagery
-The favicon used was a simple rock, paper, scissors icon. The starting image was made up from the other free images from HiClipart and can be found [here](https://www.hiclipart.com/free-transparent-background-png-clipart-ivjgh).
+The favicon used was a simple rock, paper, scissors icon. The starting image was made up from the other free images from HiClipart and can be found [here](https://www.hiclipart.com/free-transparent-background-png-clipart-havpw).
 
 #### Wireframes
-Created using Publisher as Balsamiq now charge.
-![Wireframes]()
+Created using Balsamiq.<br>
+Game Page<br>
+![Game Wireframe](assets/readme-images/wireframe-game.png)<br>
+Rules Page<br>
+![Rules Wireframe](assets/readme-images/wireframe-rules.png)
 # Differences to design
 After comparing the original wireframe designs to the finished website;
-* Start section<br>
-  T
-
+* I have added a play again button to reset the scores and start the game again.<br>
+  
 ### Existing Features
 - The website has two pages, on the first page the player can see the entire game and click on a button to take them to the second page displaying the rules and how to play the game. There is a score area to show the current score, choice buttons for the player to make their choice which change colour when hovered over and a message area showing the player who wone the point. After the player or computer reaches a score of ten, a message is displayed to let the player know who has one. The player can then click the 'play again' button to reset the game and start again.
 
 ### Features Left to Implement
-- Display bespoke messages for each option.
+- Display bespoke messages for each message option.
 
 ***
 ## Technologies
@@ -98,8 +100,8 @@ After comparing the original wireframe designs to the finished website;
 	* Git is used as version control software to commit and push code to the GitHub repository where the source code is stored.
 * [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
 	* Google chromes built in developer tools are used to inspect page elements and help debug issues with the site layout and test different CSS styles.
-* [MS PAINT](https://support.microsoft.com/en-us/windows/get-microsoft-paint-a6b9578c-ed1c-5b09-0699-4ed8115f9aa9)
-    * Used to create the wireframe pages and edit the screenshots taken.
+* [balsamiq Wireframes](https://balsamiq.com/wireframes/)
+	* This was used to create wireframes for 'The Skeleton Plane' stage of UX design.
 * [Favicon](https://favicon.io/)
     * Favicon.io was used to make the site favicon
 * [UI.Dev](https://ui.dev/amiresponsive)
