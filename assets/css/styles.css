@@ -166,3 +166,19 @@ footer {
     background: #000;
     color: #fafafa;
 }
+
+.rules-hd {
+    font-family: Caveat, cursive;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.rules {
+    font-family: Caveat, cursive;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 0 60px;
+    border: 4px solid #000;
+    border-radius: 8px;
+}
