@@ -18,17 +18,22 @@ header {
     margin-bottom: 10px;
     font-size: 150%;
 }
-#rules.btn {
-    margin:auto;
+#rules-btn {
+    display: flex;
+    justify-content: center;
+    
 }
 
 .btn {
+    margin-top: 5px;
+    margin-bottom:5px;
     border-radius: 7px;
     padding: 10px 10px;
     font-size: 20px;
     background-color: #000;
     color: #fafafa;
     font-family: Open Sans, sans-serif;
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -53,7 +58,7 @@ header {
     color: #fafafa;
     font-size: 20px;
     padding: 2px 2px;
-    font-family: Caveat, cursive;
+    border-radius: 5px;
 }
 
 #player-label {
@@ -82,7 +87,7 @@ p {
     justify-content: center;
     align-items: center;
     gap:30px;
-    padding-top: 50px;
+    padding-top: 10px;
     height:auto;
 }
 .imgChoice {
@@ -104,7 +109,7 @@ p {
 .choice {
     text-align: center;
     margin: 20px;
-
+    
 }
 
 .img-choice:hover {
@@ -123,19 +128,35 @@ p {
     background: url("../images/group-pic.png");
     
 }
-.label2 {
-    width: 140px;
-    display: flex;
-    align-items: center;
+.box1 {
+    border: 2px solid #000;
+    margin-right: 6%;
     border-radius: 5px;
-    border: 3px solid #000;
-    padding: 10px 10px;
-    height: 40px;
-    margin: 20px;
+    padding: 5px;
+    background-color: #000;
+    color: #fafafa;
+    font-size: 20px;
+    text-align: center;
+}
+.box2 {
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin-left: 6%;
+    padding: 5px;
+    background-color: #000;
+    color: #fafafa;
+    font-size: 20px;
+    text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #result {
     margin-top:20px;
+    margin-bottom: 20px;
 }
 
 footer {
