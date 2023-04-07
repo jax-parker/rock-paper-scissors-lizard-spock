@@ -138,6 +138,7 @@ p {
     color: #fafafa;
     font-size: 20px;
     text-align: center;
+    font-family: Open Sans, sans serif;
 }
 .box2 {
     border: 2px solid #000;
@@ -148,6 +149,7 @@ p {
     color: #fafafa;
     font-size: 20px;
     text-align: center;
+    font-family: Open Sans, sans serif;
 }
 .container {
     display: flex;
