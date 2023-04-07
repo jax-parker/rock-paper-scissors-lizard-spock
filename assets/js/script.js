@@ -15,24 +15,26 @@ let script = ['Paper wraps Rock', 'Paper smothers Spock', 'Scissors cut Paper', 
     'Rock blunts Scissors', 'Rock crushes Lizard', 'Lizard eats Paper', 'Lizard poisons Spock'
 ]
 const computerChoice = compChoice();
-
-
+const replayBtn = document.getElementById('replay-btn');
 
 
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to buttons 
+
 document.addEventListener("DOMContentLoaded", function () {
     for (button of buttons) {
         button.addEventListener('click', function () {
             playerChoice = this.getAttribute('data-type');
             playGame(playerChoice);
+
         });
     }
 });
 
+
 // Add user choice image to the div
 function playGame(playerChoice) {
-    document.getElementsByClassName('img-choice').value = "";
+    document.getElementsByClassName('img-choice');
     playerImage.innerHTML = `<img src="./assets/images/${playerChoice}.png" alt="Rock">`;
     compChoice();
 
@@ -92,6 +94,7 @@ function playerWin(playerChoice, compFinalChoice) {
     playerScoreSpan.innerHTML = playerScore;
     result.innerHTML = `${playerChoice} beats ${compFinalChoice}. You win!`;
     endGame();
+    
 }
 
 // If computer wins, increments score by 1 and shows message
@@ -100,6 +103,7 @@ function compWin(playerChoice, compFinalChoice) {
     computerScoreSpan.innerHTML = compScore;
     result.innerHTML = `${compFinalChoice} beats ${playerChoice}. You lose!`;
     endGame();
+
 }
 
 //If both parameters are equal, no score and display message
@@ -108,11 +112,14 @@ function gameTie(playerChoice, compFinalChoice) {
 
 }
 
-// Game ends when the user or the computer gets to 10 points
+// Game ends when the user or the computer gets to 10 points & returns message
 function endGame() {
-    if (playerScore === 10){
+    if (playerScore === 10) {
         result.innerHTML = "Congratulations! You beat the computer!"
-    } else if(compScore === 10){
+    } else if (compScore === 10) {
         result.innerHTML = "Sorry! The computer has beaten you!"
     }
+
+
 }
+replayBtn.addEventListener('click', playGame(playerChoice)); 

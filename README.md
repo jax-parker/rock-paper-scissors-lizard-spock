@@ -1,108 +1,182 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Rock Paper Scissors Lizard Spock Game
 
-Welcome jax-parker,
+## Table of Contents
+* [Purpose](#Purpose)
+* [User Experience Design (UX)](#User-Experience-Design)
+  * [User stories](#User-Stories)
+    * [First Time Visitor Goals](#First-Time-Visitor-Goals)
+    * [Returning Visitor Goals](#Returning-Visitor-Goals)
+    * [Frequent User Goals](#Frequent-Visitor-Goals)
+  * [Structure](#Structure)
+  * [Design](#Design)
+    * [Colour Scheme](#Colour-Scheme)
+    * [Typography](#Typography)
+    * [Imagery](#Imagery)
+    * [Wireframes](#Wireframes)
+    * [Differences to Design](#Differences-to-Design)
+    * [Limitations](#Limitations)
+    * [Features](#Features)
+    * [Existing Features](#Existing-Features)
+    * [Future Features](#Features-Left-to-Implement)
+* [Technologies](#Technologies)
+* [Testing](#Testing)
+    * [Test Strategy](#Test-Strategy)
+      * [Summary](#Summary)
+      * [Validation](#Validation-Test-Cases)
+    * [Test Results](#Test-Results)
+    * [Testing Issues](#Issues-and-Resolutions-to-issues-found-during-testing)
+* [Deployment](#Deployment)
+    * [Project Creation](#Project-Creation)
+    * [GitHub Pages](#Using-Github-Pages)
+* [Credits](#Credits)
+  * [Content](#Content)
+  * [Media](#Media)
+  * [Acknowledgements](#Acknowledgements)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+  # Project 2 Rock Paper Scissors Lizard Spock Game!
+  ## Purpose
+  This website was created for the sole purpose of completing the second project for the Code Institues's Full Stack Developer Course. It was built using the knowledge gained from the HTML, CSS and JavaScript courses and  Scrimba course. A full list of technologies used can be found in the technologies section of this document. The game is an extension of the original Rock Paper Scissors game and has simple rules. The player picks a variable and the image is revealed simultaneously along with a random computer choice. The winner is shown in a message as per the rules page and is the first to get to 10. In the event of a tie the score remain the same until a winner is found.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+  The live website can be found [here] (https://jax-parker.github.io/rock-paper-scissors-lizard-spock/).
 
-## Gitpod Reminders
+  ## Rock Paper Scissors Lizard Spock
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Website Mock Up]()
 
-`python3 -m http.server`
+***
+## User Experience Design
 
-A blue button should appear to click: _Make Public_,
+### User stories
+#### First Time Visitor Goals
 
-Another blue button should appear to click: _Open Browser_.
+    * As a visiting user, I want to be able to understand how to play the game after reading the rules.
+    * As a visiting user, I want to be able visually see which choice I made.
+    * As a visiting user, I want to be able to see who won the point and see the scores.
+    * As a visiting user, I want to be able to see who won the game.
+    * As a visiting user, I want to be able to be able to replay after the game has finished.
+    
+### Design
+#### Colour Scheme
+The colours chosen were contrasting to assist accesibility and picked from:.<br>
+![Hex Colors](assets/readme-images/hex-colors.png)
+#### Typography
+The title and message font used are **Caveat** which is cursive to give a fun, informal look. All other text used is **Open Sans** with letter spacing to ensure it is easy to read for children. Both fonts were imported from Google Fonts.<br>
+![Fonts Used](assets/readme-images/fonts.png)
+#### Imagery
+The favicon used was a simple rock, paper, scissors icon. The starting image was made up from the other free images from HiClipart and can be found [here](https://www.hiclipart.com/free-transparent-background-png-clipart-ivjgh).
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### Wireframes
+Created using Publisher as Balsamiq now charge.
+![Wireframes]()
+# Differences to design
+After comparing the original wireframe designs to the finished website;
+* Start section<br>
+  T
 
-A blue button should appear to click: _Make Public_,
+### Existing Features
+- The website has two pages, on the first page the player can see the entire game and click on a button to take them to the second page displaying the rules and how to play the game. There is a score area to show the current score, choice buttons for the player to make their choice which change colour when hovered over and a message area showing the player who wone the point. After the player or computer reaches a score of ten, a message is displayed to let the player know who has one. The player can then click the 'play again' button to reset the game and start again.
 
-Another blue button should appear to click: _Open Browser_.
+### Features Left to Implement
+- Display bespoke messages for each option.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+***
+## Technologies
 
-To log into the Heroku toolbelt CLI:
+* HTML
+  * This project uses HTML for the structure of the site.
+* CSS
+  * Is used to style the site, giving it colour and design.
+* JavaScript
+  * Is used for the functionality of the site allowing the player to enter their name, click through the questions, see their score and play again or return to the start.
+* MS Publisher
+  * Used to create the wireframes as the free Balsamic license had expired.
+* [Google Fonts](https://fonts.google.com/)
+	* Google fonts are used throughout the project to import the *Caveat* and *Open Sans* fonts.
+* [GitHub](https://github.com/)
+	* GithHub is the hosting site used to store the source code for the Website and [Git Pages](https://pages.github.com/) is used for the deployment of the live site.
+* [Git](https://git-scm.com/)
+	* Git is used as version control software to commit and push code to the GitHub repository where the source code is stored.
+* [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+	* Google chromes built in developer tools are used to inspect page elements and help debug issues with the site layout and test different CSS styles.
+* [MS PAINT](https://support.microsoft.com/en-us/windows/get-microsoft-paint-a6b9578c-ed1c-5b09-0699-4ed8115f9aa9)
+    * Used to create the wireframe pages and edit the screenshots taken.
+* [Favicon](https://favicon.io/)
+    * Favicon.io was used to make the site favicon
+* [UI.Dev](https://ui.dev/amiresponsive)
+    * Multi Device Website Mockup Generator was used to create the Mock up image in this README
+***
+# Testing
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Summary
+The live project can be found [Here](https://jax-parker.github.io/rock-paper-scissors-lizard-spock/)<br>
+This project is front end only with no back-end functionality, the testing performed will be on the visual effects, layout and the correct operation of the game. Testing to be done on at least three browsers and all screen sizes.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+No elements should overlap another container div.
 
-------
+All buttons should work with the appropriate function.
 
-## Release History
+## Accessibility Testing
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Accessibility has been taken into account throughout the design of this website to make it user friendly. This has been achieved by:<br>
+  * Using semantic HTML and adding aria-labels where possible.
+  * Choosing contrasting colours to give clarity to navigation and readability.<br>
+  * Google Lighthouse to test for accessibilty.<br>
+  ![Google lighthouse]() 
+  * To validate web accessibility the website was tested on [Wave](https://wave.webaim.org/).<br>
+  ![Wave](assets/readme-images/wave-report.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+ ## Validation Testing
+ * HTML - tested through the [W3C HTML Validator](https://validator.w3.org/) and no errors were found.<br>
+ ![W3C HTML Test](assets/readme-images/html-checker.png)
+ * CSS - tested through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no errors were found.<br>
+ ![W3C CSS Validator](assets/readme-images/css-checker.png)
+ * JavaScript - tested through the [Jshint.com](https://jshint.com) and no errors were found.<br>
+ ![Jshint Test](assets/readme-images/jshint-test.png)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Function Testing
+Testing Document can be found [Here]()
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Deployment
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Project Creation
+The project was started by opening my Github profile page, clicking on repositories and new. I chose the Code-Institute-Org/gitpod-full-template from my template drop down box and named my repository rock-paper-scissors-lizard-spock. I checked the Public radio button and create repository. I clicked on the new repository, then clicked gitpod to open in a new workspace.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+The following commands were used throughout the project:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+* git add - Was used to add changes to the local repository.
+* git commit -m *commit message explaining the updates* - This command was used to commit changes to the local repository.
+* git push - This command is used to push all commited changes to the GitHub repository.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Using Github Pages
+1. Navigate to the GitHub [Repository:](https://jax-parker.github.io/Farming_Quiz_For_Kids)
+2. Click the 'Settings' Tab.
+3. Click on 'Pages.
+4. Select 'Main' as the branch.
+5. Click the Save button.
+6. Click on the link to go to the live deployed page. [Live Page:](https://jax-parker.github.io/rock-paper-scissors-lizard-spock/)
+### Using A Github Branch
+I wanted a space to try out code without interferring with the code I'd already written and my Mentor gave me a [link](https://www.atlassian.com/git/tutorials/using-branches) to learn about Git branching. This was fantastic advise as it allowed me to try out code before merging it back into my main code when it finally worked.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+1. Commit and push your current branch. In the terminal type git branch to see where you are (main).
+2. Type git checkout -b nameofbranch (to create a new branch) or just git checkout nameofbranch to switch.
+3. Git will tell you it has switched to your new or previously named branch. Any changes made now will only be affective in your new branch.
+4. Commit changes as normal.
+5. To move changes to the main project - git checkout main and type git branch to recheck where you are.
+6. To merge your new code into your project type git merge nameofbranch.
+7. You can choose to delete your branch git branch -d nameofbranch without loosing any history or keep it.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+***
+## Credits
+### Code
+The html,css and javaScript code was learned from the Code Institute Full Stack Software Developer Course and by practising the Love Maths project.
+* Help with general questions: [StackOverFlow](https://stackoverflow.com/)
+* Help with syntax building: [W3Schools](https://https://www.w3schools.com/)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+### Content
+The content of this software was created by Jakki Parker.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### Media
+The images used in this video are under free license from the websites stated.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+### Acknowledgements
+Thanks you to my Mentor, Ronan McClelland for providing sound advice and extra resouces to enable me to solidify JavaScript.<br>
