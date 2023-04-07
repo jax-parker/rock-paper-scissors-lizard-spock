@@ -91,6 +91,7 @@ function playerWin(playerChoice, compFinalChoice) {
     playerScore++;
     playerScoreSpan.innerHTML = playerScore;
     result.innerHTML = `${playerChoice} beats ${compFinalChoice}. You win!`;
+    endGame();
 }
 
 // If computer wins, increments score by 1 and shows message
@@ -98,11 +99,20 @@ function compWin(playerChoice, compFinalChoice) {
     compScore++;
     computerScoreSpan.innerHTML = compScore;
     result.innerHTML = `${compFinalChoice} beats ${playerChoice}. You lose!`;
-
+    endGame();
 }
 
 //If both parameters are equal, no score and display message
 function gameTie(playerChoice, compFinalChoice) {
     result.innerHTML = ` ${playerChoice} equals ${compFinalChoice} . It's a tie!`;
 
+}
+
+// Game ends when the user or the computer gets to 10 points
+function endGame() {
+    if (playerScore === 10){
+        result.innerHTML = "Congratulations! You beat the computer!"
+    } else if(compScore === 10){
+        result.innerHTML = "Sorry! The computer has beaten you!"
+    }
 }
