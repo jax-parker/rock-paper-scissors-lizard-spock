@@ -57,7 +57,6 @@ function gameOptions() {
         case "SpockRock":
         case "SpockScissors":
             playerWin(playerChoice, compFinalChoice);
-            console.log('player wins')
             break;
         case "RockPaper":
         case "SpockPaper":
@@ -69,7 +68,6 @@ function gameOptions() {
         case "RockSpock":
         case "ScissorsSpock":
             compWin(playerChoice, compFinalChoice);
-            console.log('comp wins');
             break;
         case "RockRock":
         case "PaperPaper":
@@ -77,7 +75,6 @@ function gameOptions() {
         case "LizardLizard":
         case "SpockSpock":
             gameTie(playerChoice, compFinalChoice);
-            console.log('tie');
             break;
     }
 }
@@ -113,7 +110,6 @@ function endGame() {
 }
 // When play again is clicked, game resets
     replayBtn.addEventListener('click', ()=>{
-    console.log(replayBtn)
     playerScore = 0;
     compScore = 0;
     playerScoreSpan.innerHTML = playerScore;
