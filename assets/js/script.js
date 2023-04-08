@@ -22,16 +22,22 @@ document.addEventListener("DOMContentLoaded", function () {
         buttons.addEventListener('click', function () {
             playerChoice = this.getAttribute('data-type');
             playGame(playerChoice);
+             
 
         });
     }
 });
-
+function rePlay() {
+    replayBtn.addEventListener('click', playGame(playerChoice)); 
+    console.log(replayBtn)
+    playerScore = 0;
+    compScore = 0;
+    }
 
 // Add user choice image to the div
 function playGame(playerChoice) {
-    document.getElementsByClassName('img-choice');
-    playerImage.innerHTML = `<img src="./assets/images/${playerChoice}.png" alt="Rock">`;
+    //document.getElementsByClassName('img-choice').value="";
+    playerImage.innerHTML = '<img src="assets/images/' + playerChoice + '.png" alt="Rock">';
     compChoice();
 
 }
@@ -40,7 +46,7 @@ function playGame(playerChoice) {
 function compChoice() {
     randomChoice = (Math.floor(Math.random() * 5));
     compFinalChoice = choices[randomChoice];
-    compImage.innerHTML = `<img src="./assets/images/${compFinalChoice}.png" alt="Rock">`;
+    compImage.innerHTML = '<img src="assets/images/' + compFinalChoice + '.png" alt="Rock">';
     gameOptions();
 }
 
@@ -118,4 +124,4 @@ function endGame() {
 
 
 }
-replayBtn.addEventListener('click', playGame(playerChoice)); 
+
