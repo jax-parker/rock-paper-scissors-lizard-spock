@@ -121,7 +121,7 @@ Accessibility has been taken into account throughout the design of this website 
   * Google Lighthouse to test for accessibilty.<br>
   ![Google lighthouse](assets/readme-images/lighthouse.png) 
   * To validate web accessibility the website was tested on [Wave](https://wave.webaim.org/).<br>
-  ![Wave](assets/readme-images/wave-report.png)
+  ![Wave](assets/readme-images/wave.png)
 
  ## Validation & Function Testing
  Testing Document can be found [Here](testing.md)
