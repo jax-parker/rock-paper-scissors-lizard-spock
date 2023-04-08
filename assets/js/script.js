@@ -14,32 +14,24 @@ let compFinalChoice;
 const replayBtn = document.getElementById('replay-btn');
 
 
+
+
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to buttons 
-
 document.addEventListener("DOMContentLoaded", function () {
     for (buttons of buttons) {
         buttons.addEventListener('click', function () {
             playerChoice = this.getAttribute('data-type');
             playGame(playerChoice);
-             
-
         });
     }
 });
-function rePlay() {
-    replayBtn.addEventListener('click', playGame(playerChoice)); 
-    console.log(replayBtn)
-    playerScore = 0;
-    compScore = 0;
-    }
 
 // Add user choice image to the div
 function playGame(playerChoice) {
     //document.getElementsByClassName('img-choice').value="";
     playerImage.innerHTML = '<img src="assets/images/' + playerChoice + '.png" alt="Rock">';
     compChoice();
-
 }
 
 //Chooses random word from the choices array for the computers turn
@@ -89,14 +81,12 @@ function gameOptions() {
     }
 }
 
-
 // If player wins, increments score by 1 and shows message
 function playerWin(playerChoice, compFinalChoice) {
     playerScore++;
     playerScoreSpan.innerHTML = playerScore;
     result.innerHTML = `${playerChoice} beats ${compFinalChoice}. You win!`;
     endGame();
-    
 }
 
 // If computer wins, increments score by 1 and shows message
@@ -105,13 +95,11 @@ function compWin(playerChoice, compFinalChoice) {
     computerScoreSpan.innerHTML = compScore;
     result.innerHTML = `${compFinalChoice} beats ${playerChoice}. You lose!`;
     endGame();
-
 }
 
 //If both parameters are equal, no score and display message
 function gameTie(playerChoice, compFinalChoice) {
     result.innerHTML = ` ${playerChoice} equals ${compFinalChoice} . It's a tie!`;
-
 }
 
 // Game ends when the user or the computer gets to 10 points & returns message
@@ -121,7 +109,13 @@ function endGame() {
     } else if (compScore === 10) {
         result.innerHTML = "Sorry! The computer has beaten you!";
     }
-
-
 }
+// When play again is clicked, game resets
 
+    replayBtn.addEventListener('click', ()=>{
+    console.log(replayBtn)
+    playerScore = 0;
+    compScore = 0;
+    playerScoreSpan.innerHTML = playerScore;
+    computerScoreSpan.innerHTML = compScore;
+});
