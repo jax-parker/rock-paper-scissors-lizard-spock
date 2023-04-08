@@ -8,10 +8,11 @@ let compScore = 0;
 let playerScoreSpan = document.getElementById('player-score');
 let computerScoreSpan = document.getElementById('computer-score');
 let buttons = document.getElementsByTagName('button');
+let replayBtn = document.getElementById('replay-btn');
 let playerChoice;
 let randomChoice;
 let compFinalChoice;
-const replayBtn = document.getElementById('replay-btn');
+
 
 
 
@@ -38,7 +39,7 @@ function playGame(playerChoice) {
 function compChoice() {
     randomChoice = (Math.floor(Math.random() * 5));
     compFinalChoice = choices[randomChoice];
-    compImage.innerHTML = '<img src="assets/images/' + compFinalChoice + '.png" alt="Rock">';
+   compImage.innerHTML = '<img src="assets/images/' + compFinalChoice + '.png" alt="Rock">';
     gameOptions();
 }
 
@@ -111,7 +112,6 @@ function endGame() {
     }
 }
 // When play again is clicked, game resets
-
     replayBtn.addEventListener('click', ()=>{
     console.log(replayBtn)
     playerScore = 0;

@@ -41,7 +41,7 @@
 
   ## Rock Paper Scissors Lizard Spock
 
-![Website Mock Up]()
+![Website Mock Up](assets/readme-images/screens-pic.png)
 
 ***
 ## User Experience Design
@@ -129,11 +129,11 @@ Accessibility has been taken into account throughout the design of this website 
 
  ## Validation Testing
  * HTML - tested through the [W3C HTML Validator](https://validator.w3.org/) and no errors were found.<br>
- ![W3C HTML Test](assets/readme-images/html-checker.png)
+ ![W3C HTML Test](assets/readme-images/html-check.png)
  * CSS - tested through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no errors were found.<br>
- ![W3C CSS Validator](assets/readme-images/css-checker.png)
+ ![W3C CSS Validator](assets/readme-images/css-check.png)
  * JavaScript - tested through the [Jshint.com](https://jshint.com) and no errors were found.<br>
- ![Jshint Test](assets/readme-images/jshint-test.png)
+ ![Jshint Test](assets/readme-images/js-check.png) one warning was shown as explained in the Portfolio Project Scope video.
 
 ## Function Testing
 Testing Document can be found [Here]()
@@ -150,7 +150,7 @@ The following commands were used throughout the project:
 * git push - This command is used to push all commited changes to the GitHub repository.
 
 ### Using Github Pages
-1. Navigate to the GitHub [Repository:](https://jax-parker.github.io/Farming_Quiz_For_Kids)
+1. Navigate to the GitHub [Repository:](https://jax-parker.github.io/rock-paper-scissors-lizard-spock/)
 2. Click the 'Settings' Tab.
 3. Click on 'Pages.
 4. Select 'Main' as the branch.

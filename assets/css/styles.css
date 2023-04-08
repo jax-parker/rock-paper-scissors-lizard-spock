@@ -170,9 +170,16 @@ p {
 footer {
     position: absolute;
     width: 100%;
+    height:min-content;
     text-align: center;
     background: #000;
+    margin-top:20px;
+}
+
+.footer {
+    font-size: 15px;
     color: #fafafa;
+    font-family: Open sans, san serif;
 }
 
 .rules-hd {
