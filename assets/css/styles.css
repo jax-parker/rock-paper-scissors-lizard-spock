@@ -200,6 +200,7 @@ footer {
 
 #replay-btn {
     margin-left: 20px;
+    cursor: pointer;
 }
 
 /*Media screen*/

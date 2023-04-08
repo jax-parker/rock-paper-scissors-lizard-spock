@@ -1,4 +1,12 @@
-## Rock Paper Scissors Lizard Spock Game
+# Project 2 Rock Paper Scissors Lizard Spock Game!
+  ## Purpose
+  This website was created for the sole purpose of completing the second project for the Code Institues's Full Stack Developer Course. It was built using the knowledge gained from the HTML, CSS and JavaScript courses and  Scrimba course. A full list of technologies used can be found in the technologies section of this document. The game is an extension of the original Rock Paper Scissors game and has simple rules. The player picks a variable and the image is revealed simultaneously along with a random computer choice. The winner is shown in a message as per the rules page and is the first to get to 10. In the event of a tie the score remains the same until a winner is found.
+
+  The live website can be found [here] (https://jax-parker.github.io/rock-paper-scissors-lizard-spock/).
+ 
+![Website Mock Up](assets/readme-images/screens-pic.png)
+
+***
 
 ## Table of Contents
 * [Purpose](#Purpose)
@@ -32,18 +40,6 @@
   * [Content](#Content)
   * [Media](#Media)
   * [Acknowledgements](#Acknowledgements)
-
-  # Project 2 Rock Paper Scissors Lizard Spock Game!
-  ## Purpose
-  This website was created for the sole purpose of completing the second project for the Code Institues's Full Stack Developer Course. It was built using the knowledge gained from the HTML, CSS and JavaScript courses and  Scrimba course. A full list of technologies used can be found in the technologies section of this document. The game is an extension of the original Rock Paper Scissors game and has simple rules. The player picks a variable and the image is revealed simultaneously along with a random computer choice. The winner is shown in a message as per the rules page and is the first to get to 10. In the event of a tie the score remains the same until a winner is found.
-
-  The live website can be found [here] (https://jax-parker.github.io/rock-paper-scissors-lizard-spock/).
-
-  ## Rock Paper Scissors Lizard Spock
-
-![Website Mock Up](assets/readme-images/screens-pic.png)
-
-***
 ## User Experience Design
 
 ### User stories
@@ -123,20 +119,12 @@ Accessibility has been taken into account throughout the design of this website 
   * Using semantic HTML and adding aria-labels where possible.
   * Choosing contrasting colours to give clarity to navigation and readability.<br>
   * Google Lighthouse to test for accessibilty.<br>
-  ![Google lighthouse]() 
+  ![Google lighthouse](assets/readme-images/lighthouse.png) 
   * To validate web accessibility the website was tested on [Wave](https://wave.webaim.org/).<br>
   ![Wave](assets/readme-images/wave-report.png)
 
- ## Validation Testing
- * HTML - tested through the [W3C HTML Validator](https://validator.w3.org/) and no errors were found.<br>
- ![W3C HTML Test](assets/readme-images/html-check.png)
- * CSS - tested through the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) and no errors were found.<br>
- ![W3C CSS Validator](assets/readme-images/css-check.png)
- * JavaScript - tested through the [Jshint.com](https://jshint.com) and no errors were found.<br>
- ![Jshint Test](assets/readme-images/js-check.png) one warning was shown as explained in the Portfolio Project Scope video.
-
-## Function Testing
-Testing Document can be found [Here]()
+ ## Validation & Function Testing
+ Testing Document can be found [Here](testing.md)
 
 ## Deployment
 
