@@ -39,7 +39,7 @@ function compChoice() {
     gameOptions();
 }
 
-// Function to decide which choice wins, loses or draws.
+// Function to decide which choice wins, loses or draws and runs corresponding function.
 function gameOptions() {
     switch (playerChoice + compFinalChoice) {
         case "PaperRock":
@@ -104,7 +104,6 @@ function endGame() {
     } else if (compScore === 10) {
         result.innerHTML = "Sorry! The computer has beaten you!";
         resetGame();
-        
     }
 }
 
@@ -116,10 +115,9 @@ function resetGame() {
     computerScoreSpan.innerHTML = compScore;
     playerImage.innerHTML = "";
     compImage.innerHTML = "";
-    
 }
 
-// Function to allow the user to reset the game at any point during the game
+// Function to allow the user to reset the game at any point during the game using the 'Play again' button(span)
 function replayGame() {
         replayBtn.addEventListener('click', () => {
         playerScore = 0;

@@ -18,10 +18,15 @@ header {
     margin-bottom: 10px;
     font-size: 150%;
 }
-
+/*Rules & Scoreboard Section*/
 #rules-btn {
     display: flex;
     justify-content: center;
+}
+
+#replay-btn {
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 .btn {
@@ -78,7 +83,7 @@ p {
     color: #000;
     margin: 10px;
 }
-
+/*Game Section*/
 
 #game-img {
     display: flex;
@@ -102,7 +107,6 @@ p {
     background: url("../images/group-pic.png");
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .imgChoice img {
@@ -113,7 +117,6 @@ p {
 .choice {
     text-align: center;
     margin: 20px;
-
 }
 
 .img-choice:hover {
@@ -164,6 +167,7 @@ p {
     margin-bottom: 20px;
 }
 
+/*Footer Section*/
 footer {
     position: absolute;
     width: 100%;
@@ -179,6 +183,7 @@ footer {
     font-family: Open sans, san serif;
 }
 
+/*Rules Page*/
 .rules-hd {
     font-family: Caveat, cursive;
     text-align: center;
@@ -193,11 +198,6 @@ footer {
     margin: 0 60px;
     border: 4px solid #000;
     border-radius: 8px;
-}
-
-#replay-btn {
-    margin-left: 20px;
-    cursor: pointer;
 }
 
 /*Media screen*/
