@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             playGame(playerChoice);
         });
     }
+    replayGame();
 });
 
 // Add user choice image to the div
@@ -99,12 +100,11 @@ function gameTie(playerChoice, compFinalChoice) {
 function endGame() {
     if (playerScore === 10) {
         result.innerHTML = "Congratulations! You beat the computer!";
-        replayGame();
         resetGame();
     } else if (compScore === 10) {
         result.innerHTML = "Sorry! The computer has beaten you!";
-        replayGame();
         resetGame();
+        
     }
 }
 
@@ -116,16 +116,18 @@ function resetGame() {
     computerScoreSpan.innerHTML = compScore;
     playerImage.innerHTML = "";
     compImage.innerHTML = "";
+    
 }
 
 // Function to allow the user to reset the game at any point during the game
 function replayGame() {
-    replayBtn.addEventListener('click', () => {
+        replayBtn.addEventListener('click', () => {
         playerScore = 0;
         compScore = 0;
         playerScoreSpan.innerHTML = playerScore;
         computerScoreSpan.innerHTML = compScore;
         playerImage.innerHTML = "";
         compImage.innerHTML = "";
+        result.innerHTML= "Who wins?";
     })
 }
