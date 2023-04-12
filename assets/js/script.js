@@ -13,10 +13,6 @@ let playerChoice;
 let randomChoice;
 let compFinalChoice;
 
-
-
-
-
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to buttons 
 document.addEventListener("DOMContentLoaded", function () {
@@ -34,7 +30,7 @@ function playGame(playerChoice) {
     compChoice();
 }
 
-//Chooses random word from the choices array for the computers turn
+//Chooses random word from the choices array for the computers turn & adds image to div
 function compChoice() {
     randomChoice = (Math.floor(Math.random() * 5));
     compFinalChoice = choices[randomChoice];
@@ -84,8 +80,6 @@ function playerWin(playerChoice, compFinalChoice) {
     playerScoreSpan.innerHTML = playerScore;
     result.innerHTML = `${playerChoice} beats ${compFinalChoice}. You win!`;
     endGame();
-
-
 }
 
 // If computer wins, increments score by 1 and shows message
@@ -94,17 +88,14 @@ function compWin(playerChoice, compFinalChoice) {
     computerScoreSpan.innerHTML = compScore;
     result.innerHTML = `${compFinalChoice} beats ${playerChoice}. You lose!`;
     endGame();
-
-
 }
 
 //If both parameters are equal, no score and display message
 function gameTie(playerChoice, compFinalChoice) {
     result.innerHTML = ` ${playerChoice} equals ${compFinalChoice} . It's a tie!`;
-
 }
 
-// Game ends when the user or the computer gets to 10 points & returns message
+// Game ends when the user or the computer gets to 10 points, returns message & resets game
 function endGame() {
     if (playerScore === 10) {
         result.innerHTML = "Congratulations! You beat the computer!";
@@ -117,6 +108,7 @@ function endGame() {
     }
 }
 
+// Function to reset the game when finished, clearing scores and images
 function resetGame() {
     playerScore = 0;
     compScore = 0;
@@ -124,12 +116,10 @@ function resetGame() {
     computerScoreSpan.innerHTML = compScore;
     playerImage.innerHTML = "";
     compImage.innerHTML = "";
-    console.log(playerChoice);
-    console.log(compFinalChoice);
 }
 
+// Function to allow the user to reset the game at any point during the game
 function replayGame() {
-
     replayBtn.addEventListener('click', () => {
         playerScore = 0;
         compScore = 0;
