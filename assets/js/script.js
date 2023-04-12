@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Add user choice image to the div
 function playGame(playerChoice) {
-    //document.getElementsByClassName('img-choice').value="";
     playerImage.innerHTML = '<img src="assets/images/' + playerChoice + '.png" alt="Rock">';
     compChoice();
 }
@@ -85,8 +84,8 @@ function playerWin(playerChoice, compFinalChoice) {
     playerScoreSpan.innerHTML = playerScore;
     result.innerHTML = `${playerChoice} beats ${compFinalChoice}. You win!`;
     endGame();
-    
-    
+
+
 }
 
 // If computer wins, increments score by 1 and shows message
@@ -95,47 +94,48 @@ function compWin(playerChoice, compFinalChoice) {
     computerScoreSpan.innerHTML = compScore;
     result.innerHTML = `${compFinalChoice} beats ${playerChoice}. You lose!`;
     endGame();
-    
-    
+
+
 }
 
 //If both parameters are equal, no score and display message
 function gameTie(playerChoice, compFinalChoice) {
     result.innerHTML = ` ${playerChoice} equals ${compFinalChoice} . It's a tie!`;
-    
+
 }
 
 // Game ends when the user or the computer gets to 10 points & returns message
 function endGame() {
     if (playerScore === 10) {
         result.innerHTML = "Congratulations! You beat the computer!";
+        replayGame();
         resetGame();
     } else if (compScore === 10) {
         result.innerHTML = "Sorry! The computer has beaten you!";
+        replayGame();
         resetGame();
     }
-    
 }
-// When play again is clicked, game resets at any time during the game
-replayBtn.addEventListener('click', () => {
+
+function resetGame() {
     playerScore = 0;
     compScore = 0;
     playerScoreSpan.innerHTML = playerScore;
     computerScoreSpan.innerHTML = compScore;
+    playerImage.innerHTML = "";
+    compImage.innerHTML = "";
     console.log(playerChoice);
     console.log(compFinalChoice);
-    
-});
+}
 
-function resetGame() {
-  if (playerChoice || compFinalChoice == null) {
-    playerChoice = '<img src="assets/images/group-pic.png" alt="Rock">';
-    compFinalChoice = '<img src="assets/images/group-pic.png" alt="Rock">';
-  }
- replayBtn.addEventListener('click', () => {
-  playerScore = 0;
-   compScore = 0;
-  playerScoreSpan.innerHTML = playerScore;
-  computerScoreSpan.innerHTML = compScore;
-  }
-)}  
+function replayGame() {
+
+    replayBtn.addEventListener('click', () => {
+        playerScore = 0;
+        compScore = 0;
+        playerScoreSpan.innerHTML = playerScore;
+        computerScoreSpan.innerHTML = compScore;
+        playerImage.innerHTML = "";
+        compImage.innerHTML = "";
+    })
+}
