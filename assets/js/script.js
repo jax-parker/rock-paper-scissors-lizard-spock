@@ -109,10 +109,12 @@ function gameTie(playerChoice, compFinalChoice) {
 function endGame() {
     if (playerScore === 10) {
         result.innerHTML = "Congratulations! You beat the computer!";
+        resetGame();
     } else if (compScore === 10) {
         result.innerHTML = "Sorry! The computer has beaten you!";
+        resetGame();
     }
-    resetGame();
+    
 }
 // When play again is clicked, game resets at any time during the game
 replayBtn.addEventListener('click', () => {
@@ -127,7 +129,7 @@ replayBtn.addEventListener('click', () => {
 
 function resetGame() {
   if (playerChoice || compFinalChoice == null) {
-    playGame(playerChoice) = '<img src="assets/images/group-pic.png" alt="Rock">';
+    playerChoice = '<img src="assets/images/group-pic.png" alt="Rock">';
     compFinalChoice = '<img src="assets/images/group-pic.png" alt="Rock">';
   }
  replayBtn.addEventListener('click', () => {
