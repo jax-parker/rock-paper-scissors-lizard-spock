@@ -39,7 +39,7 @@ function playGame(playerChoice) {
 function compChoice() {
     randomChoice = (Math.floor(Math.random() * 5));
     compFinalChoice = choices[randomChoice];
-   compImage.innerHTML = '<img src="assets/images/' + compFinalChoice + '.png" alt="Rock">';
+    compImage.innerHTML = '<img src="assets/images/' + compFinalChoice + '.png" alt="Rock">';
     gameOptions();
 }
 
@@ -85,6 +85,8 @@ function playerWin(playerChoice, compFinalChoice) {
     playerScoreSpan.innerHTML = playerScore;
     result.innerHTML = `${playerChoice} beats ${compFinalChoice}. You win!`;
     endGame();
+    
+    
 }
 
 // If computer wins, increments score by 1 and shows message
@@ -93,11 +95,14 @@ function compWin(playerChoice, compFinalChoice) {
     computerScoreSpan.innerHTML = compScore;
     result.innerHTML = `${compFinalChoice} beats ${playerChoice}. You lose!`;
     endGame();
+    
+    
 }
 
 //If both parameters are equal, no score and display message
 function gameTie(playerChoice, compFinalChoice) {
     result.innerHTML = ` ${playerChoice} equals ${compFinalChoice} . It's a tie!`;
+    
 }
 
 // Game ends when the user or the computer gets to 10 points & returns message
@@ -107,11 +112,28 @@ function endGame() {
     } else if (compScore === 10) {
         result.innerHTML = "Sorry! The computer has beaten you!";
     }
+    resetGame();
 }
-// When play again is clicked, game resets
-    replayBtn.addEventListener('click', ()=>{
+// When play again is clicked, game resets at any time during the game
+replayBtn.addEventListener('click', () => {
     playerScore = 0;
     compScore = 0;
     playerScoreSpan.innerHTML = playerScore;
     computerScoreSpan.innerHTML = compScore;
+    console.log(playerChoice);
+    console.log(compFinalChoice);
+    
 });
+
+function resetGame() {
+  if (playerChoice || compFinalChoice == null) {
+    playGame(playerChoice) = '<img src="assets/images/group-pic.png" alt="Rock">';
+    compFinalChoice = '<img src="assets/images/group-pic.png" alt="Rock">';
+  }
+ replayBtn.addEventListener('click', () => {
+  playerScore = 0;
+   compScore = 0;
+  playerScoreSpan.innerHTML = playerScore;
+  computerScoreSpan.innerHTML = compScore;
+  }
+)}  
