@@ -118,6 +118,7 @@ function resetGame() {
 }
 
 // Function to allow the user to reset the game at any point during the game using the 'Play again' button(span)
+// Assistance with a bug in this function was given from Josh in CI Student Support
 function replayGame() {
         replayBtn.addEventListener('click', () => {
         playerScore = 0;

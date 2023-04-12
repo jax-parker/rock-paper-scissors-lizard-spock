@@ -177,12 +177,13 @@ w. In the top right, click 'Fork'.
 The html,css and javaScript code was learned from the Code Institute Full Stack Software Developer Course and by practising the Love Maths project.
 * Help with general questions: [StackOverFlow](https://stackoverflow.com/)
 * Help with syntax building: [W3Schools](https://https://www.w3schools.com/)
+* Help with debugging the Play Again button was given from Josh in Code Institute Student Support.
 
 ### Content
 The content of this software was created by Jakki Parker.
 
 ### Media
-The images used in this video are under free license from the websites stated.
+The images used in this video are under free license from the websites stated in the Imagery Section. [Imagery]#Imagery
 
 ### Acknowledgements
 Thanks you to my Mentor, Ronan McClelland for providing sound advice and extra resouces to enable me to solidify JavaScript.<br>
