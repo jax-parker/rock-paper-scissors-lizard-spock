@@ -46,7 +46,7 @@
 #### Visitor Goals
 
     * As a visiting user, I want to be able to understand how to play the game after reading the rules.
-    * As a visiting user, I want to be able visually see which choice I made.
+    * As a visiting user, I want to be able visually see which choice I made & which choice the computer made.
     * As a visiting user, I want to be able to see who won the point and see the scores.
     * As a visiting user, I want to be able to see who won the game.
     * As a visiting user, I want to be able to be able to replay after the game has finished.
@@ -56,10 +56,10 @@
 The colours chosen were contrasting to assist accesibility and picked from:.<br>
 ![Hex Colors](assets/readme-images/hex-colours.png)
 #### Typography
-The title and message font used are **Caveat** which is cursive to give a fun, informal look. All other text used is **Open Sans** with letter spacing to ensure it is easy to read for children. Both fonts were imported from Google Fonts.<br>
+The title and message font used are **Caveat** which is cursive to give a fun, informal look. All other text used is **Open Sans** with letter spacing to ensure it is easy to read. Both fonts were imported from Google Fonts.<br>
 ![Fonts Used](assets/readme-images/fonts.png)
 #### Imagery
-The favicon used was a simple rock, paper, scissors icon. The starting image was made up from the other free images from HiClipart and can be found [here](https://www.hiclipart.com/free-transparent-background-png-clipart-havpw).
+The favicon used was a simple rock, paper, scissors icon. The starting image was created using the other free images from HiClipart and can be found [here](https://www.hiclipart.com/free-transparent-background-png-clipart-havpw).
 
 #### Wireframes
 Created using Balsamiq.<br>
@@ -86,8 +86,6 @@ After comparing the original wireframe designs to the finished website;
   * Is used to style the site, giving it colour and design.
 * JavaScript
   * Is used for the functionality of the site allowing the player to enter their name, click through the questions, see their score and play again or return to the start.
-* MS Publisher
-  * Used to create the wireframes as the free Balsamic license had expired.
 * [Google Fonts](https://fonts.google.com/)
 	* Google fonts are used throughout the project to import the *Caveat* and *Open Sans* fonts.
 * [GitHub](https://github.com/)
@@ -108,10 +106,6 @@ After comparing the original wireframe designs to the finished website;
 ## Summary
 The live project can be found [Here](https://jax-parker.github.io/rock-paper-scissors-lizard-spock/)<br>
 This project is front end only with no back-end functionality, the testing performed will be on the visual effects, layout and the correct operation of the game. Testing to be done on at least three browsers and all screen sizes.
-
-No elements should overlap another container div.
-
-All buttons should work with the appropriate function.
 
 ## Accessibility Testing
 
@@ -155,6 +149,28 @@ I wanted a space to try out code without interferring with the code I'd already 
 6. To merge your new code into your project type git merge nameofbranch.
 7. You can choose to delete your branch git branch -d nameofbranch without loosing any history or keep it.
 
+### How to Fork it
+1. On GitHub go to [jax-parker/rock-paper-scissors-lizard-spock](https://github.com/jax-parker/rock-paper-scissors-lizard-spock)
+w. In the top right, click 'Fork'.
+
+### How to Clone it
+1. Go to the main page of the repository.
+3. Above the file list, click "Code".
+4. Select HTTPS, SSH, or GitHub CLI and then click copy to clone it.
+5. Open Git Bash.
+6. Change the location of your cloned repository.
+7. Type `git clone` and then paste the URL you copied.
+8. Press “Enter” to create your clone.
+
+### Making a Local Clone
+1. Locate the [Repository](https://github.com/jax-parker/rock-paper-scissors-lizard-spock).
+2. Click "Code".
+3. Click Clone or Download.
+4. Copy the Git URL from the dialogue box.
+5. Open a terminal window in your choosen directory using your preferred development editor.
+6. Change the location to where you want the cloned directory to be.
+7. Type `git clone`, and then paste the URL you copied.
+8. Press Enter, and your local clone will be created.
 ***
 ## Credits
 ### Code

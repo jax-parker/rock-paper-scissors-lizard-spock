@@ -18,13 +18,14 @@
 </head>
 
 <body>
-    <header>
-        <h1>Rock Paper Scissors Lizard Spock</h1>
-    </header>
     <section>
+        <header>
+            <h1>Rock Paper Scissors Lizard Spock</h1>
+        </header>
+        <!--Rules, Play Again and Scoreboard Section-->
         <div id="rules-btn">
             <a href="rules.html" class="btn" aria-label="Rules">Rules</a>
-            <span id="replay-btn" class="btn" aria-label="play again?">Play again?</span>
+            <span id="replay-btn" class="btn">Play again?</span>
         </div>
         <div id='score-board'>
             <div id="player-label" class='label'>Player</div>
@@ -32,9 +33,10 @@
             <span id="player-score">0</span>:<span id="computer-score">0</span>
         </div>
     </section>
+    <!--Game Section-->
     <section>
         <div class="choices">
-            <p>Make Your Choice!</p>
+            <h2>Make Your Choice!</h2>
             <div class="choice">
                 <button class="img-choice" id="rock" data-type="Rock" aria-label="rock icon">Rock</button>
                 <button class="img-choice" id="paper" data-type="Paper" aria-label="paper icon">Paper</button>
@@ -46,7 +48,7 @@
         </div>
 
         <div id="result">
-            <p id="result-message">Who wins?</p>
+            <h2 id="result-message">Who wins?</h2>
 
         </div>
         <div class="container">

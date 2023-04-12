@@ -127,5 +127,5 @@ function replayGame() {
         playerImage.innerHTML = "";
         compImage.innerHTML = "";
         result.innerHTML= "Who wins?";
-    })
+    });
 }
